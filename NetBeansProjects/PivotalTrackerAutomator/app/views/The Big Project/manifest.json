@@ -1,0 +1,19 @@
+{
+  "manifest_version" : 2,
+  "name": "Story Tools for Pivotal Tracker",
+  "version": "1.8",
+  "description": "Adds the ability to split stories into epics and duplicate stories to Pivotal Tracker.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.pivotaltracker.com/s/projects/*"],
+      "js": ["jquery.js", "selectedComponent.user.js"],
+      "run_at" : "document_idle"
+    }
+  ],
+  "icons": { "128": "Icon.png"
+  },
+  "permissions":[
+      "https://www.pivotaltracker.com/",
+      "http://www.pivotaltracker.com/"
+  ]
+}
